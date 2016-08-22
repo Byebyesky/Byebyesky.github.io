@@ -1,9 +1,14 @@
 body{
-	background-color: #444;
+	background-color: #d9d9d9;
 }
 
-h1{
-	color: white;
+.headline{
+	color: black;
+	text-align: center;
+}
+
+.head{
+	text-align: center;
 }
 
 .navbar{
@@ -12,7 +17,9 @@ h1{
 }
 
 .this{
-	background-color: purple;
-	color: white;
+	background-color: white;
 	border-radius: 5px;
+	border: 1px solid black;
+	color: black;
+	text-align: center;
 }
