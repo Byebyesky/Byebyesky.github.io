@@ -24,11 +24,23 @@ body{
 .row-centered {
     text-align:center;
 }
+
 .col-centered {
     display:inline-block;
     float:none;
     /* reset the text-align */
-    text-align:left;
+        text-align:left;
     /* inline-block space fix */
     margin-right:-4px;
+}
+
+footer{
+	background: black;
+	color:white;
+	text-align:center;
+}
+
+.image{
+	height: 200px;
+	width: 100%;
 }
