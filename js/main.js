@@ -24,6 +24,10 @@ function httpGetAsync(theUrl, callback)
     Http.onreadystatechange = function() { 
         if (Http.readyState == 4 && Http.status == 200)
         callback(contentArea, Http.responseText);
+        else
+        callback(contentArea, 
+            "<p>Can't retrieve page: " + Http.status + 
+            "<br>Please contact the admin of the page!</p>" );    
       }
 }
 
@@ -31,20 +35,18 @@ function setContent(target, content) {
     target.innerHTML = content;
 }
 
-function resetAll() {
+function resetAllButtons() {
     for(var i = 0; i < buttons.length; i++) {
         buttons[i].className = "button";
     }
 }
 
 function loadPage(index) {
-    resetAll();
-    buttons[index].className += " active";
-    httpGetAsync(pages[index], setContent);
-}
-
-function gibVal(i) {
-    return i;
+    if(buttons[index].className !== "button active"){
+        resetAllButtons();
+        buttons[index].className += " active";
+        httpGetAsync(pages[index], setContent);
+    }
 }
 
 loadPage(0);
