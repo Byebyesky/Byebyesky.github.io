@@ -30,7 +30,7 @@ body {
 
 /* Opacity layer*/
 #site {
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.5);
     min-width: 100vw;
     min-height: 90vh;
     max-height: 100vh;
@@ -65,7 +65,7 @@ body {
     max-height: 20vh;
     margin: 0 auto 0 auto;
     padding-bottom: 3px;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.65);
     overflow: auto;
     border-radius: 10px 10px 0 0;
 }
@@ -95,7 +95,7 @@ body {
     max-width: 80vw;
     max-height: 60vh;
     margin: 0px auto 0 auto;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.65);
     overflow: auto;
     padding-top: 0px;
     border-radius: 0 0 10px 10px;
