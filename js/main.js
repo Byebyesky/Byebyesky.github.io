@@ -6,8 +6,6 @@ const buttons = [
     document.getElementById('button-contact')
 ];
 
-const contentArea = document.getElementById("content");
-
 const pages = [
     "pages/home.html",
     "pages/blog.html",
@@ -15,6 +13,8 @@ const pages = [
     "pages/about.html",
     "pages/contact.html"
 ];
+
+const contentArea = document.getElementById("content");
 
 function httpGetAsync(theUrl, callback)
 {
@@ -49,24 +49,13 @@ function loadPage(index) {
     }
 }
 
-loadPage(0);
-
-buttons[0].addEventListener('click', function() {
+function init() {
     loadPage(0);
-} );
+    buttons[0].addEventListener('click', function() {loadPage(0);} );
+    buttons[1].addEventListener('click', function() {loadPage(1);} );
+    buttons[2].addEventListener('click', function() {loadPage(2);} );
+    buttons[3].addEventListener('click', function() {loadPage(3);} );
+    buttons[4].addEventListener('click', function() {loadPage(4);} );
+}
 
-buttons[1].addEventListener('click', function() {
-    loadPage(1);
-} );
-
-buttons[2].addEventListener('click', function() {
-    loadPage(2);
-} );
-
-buttons[3].addEventListener('click', function() {
-    loadPage(3);
-} );
-
-buttons[4].addEventListener('click', function() {
-    loadPage(4);
-} );
+init();

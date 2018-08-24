@@ -3,19 +3,32 @@
     color: white;
 }
 
-/*bg image*/
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/*No scrollbar*/
+::-webkit-scrollbar {
+    width: 0; 
+    background: transparent;
+}
+
+/* Background image*/
 body {
     background-image: url('../assets/bg.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
     margin: 0;
     border: 0;
     padding: 0;
 }
 
-/*opacity layer*/
+/* Opacity layer*/
 #site {
     background-color: rgba(0,0,0,0.4);
     min-width: 100vw;
@@ -24,21 +37,15 @@ body {
     max-width: 100vw;
     overflow: auto;
     margin: 0;
-    padding: 0;
 }
 
-/*middle container*/
-#main-container {
-    min-height: 30vh;
-    min-width: 20vw;
-    max-width: 80vw;
-    max-height: 70vh;
-    margin: 0vh auto 0 auto;
-    background-color: rgba(0,0,0,0.6);
-    overflow: auto;
-    border-radius: 10px;
+/* Text top */
+.branding {
+    text-align: center;
+    font-size: 16px;
 }
 
+/* Navbar */
 #navbar a {
     text-decoration: none;
 }
@@ -48,23 +55,29 @@ body {
     margin: 0px;
 }
 
-.button {
-    padding-top: 5px;
-    display: inline-block;
-    list-style: none;
-    border-bottom: solid 2px aqua;
-    border-radius: 3px;
-    width: 19%;
+#navbar {
+    text-align: center;
+    font-size: 24px;
+    margin: 0px;
+    border: 0px;
+    min-width: 20vw;
+    max-width: 80vw;
+    max-height: 20vh;
+    margin: 0 auto 0 auto;
+    padding-bottom: 3px;
+    background-color: rgba(0,0,0,0.6);
+    overflow: auto;
+    border-radius: 10px 10px 0 0;
 }
 
-@media screen and (max-width:600px) {
-    .button {
-        width: 32%;
-    }
-
-    #main-container {
-        max-width: 90vw;
-    }
+/* Buttons */
+.button {
+    padding-top: 0px;
+    display: inline-block;
+    list-style: none;
+    border-bottom: solid 1px aqua;
+    border-radius: 3px;
+    width: 19%;
 }
 
 .button:hover {
@@ -72,14 +85,20 @@ body {
 }
 
 .button.active {
-    border-bottom: solid 2px rgb(138, 42, 42);
+    border-bottom-color: rgb(138, 42, 42);
 }
 
-#navbar {
-    text-align: center;
-    font-size: 24px;
-    margin: 0px;
-    border: 0px;
+/* Main Container */
+#main-container {
+    min-height: 30vh;
+    min-width: 20vw;
+    max-width: 80vw;
+    max-height: 60vh;
+    margin: 0px auto 0 auto;
+    background-color: rgba(0,0,0,0.6);
+    overflow: auto;
+    padding-top: 0px;
+    border-radius: 0 0 10px 10px;
 }
 
 .content {
@@ -88,30 +107,34 @@ body {
     margin: 0px 10px;
 }
 
-.branding {
-    text-align: center;
-    font-size: 16px;
-}
-
+/* Copyright */
 #main-footer {
-    display: block;
-    width: 100%;
-    height: 10vh;
+    display: inline-block;
+    width: 100vw;
+    min-height: 10vh;
     text-align: center;
     font-size: 16px;
-    background: rgba(0,0,0,0.4);
-    padding: 0px;
-    margin: 0px;
+    background-color: rgba(0,0,0,0.4);
 }
 
 #main-footer hr {
     min-width: 20vw;
     max-width: 80vw;
-    margin: 0px auto;
+    margin: 10px auto;
     padding: 0px;
 }
 
-::-webkit-scrollbar {
-    width: 0px; 
-    background: transparent;
+@media screen and (max-width:600px) {
+    .button {
+        width: 32%;
+    }
+    #main-container {
+        max-width: 90vw;
+    }
+    #navbar {
+        max-width: 90vw;
+    }
+    #main-footer hr {
+        max-width: 90vw;
+    }
 }
