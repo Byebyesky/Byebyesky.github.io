@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+
+<html>
+	<head>
+	  <title>Text Editor</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="utf-8">
+	  <link id='style' rel="stylesheet" href="style.css"/>
+    </head>
+    <body> 
+      <div><div id="linenumber" class="editor-pane textpane"></div><div id="editor" class="textpane editor-pane" contenteditable="true" spellcheck="false"><p></p></div></div><br><br>
+
+        <div class="slidercontainer">
+            <input type="range" min="11" max="69" value="25" class="slider" id="myRange">
+        </div><br>
+        <div>Fontsize: <input type="number" min="11" step="1" max="100" id="slidervalue" class="textpane" contenteditable="true"></div><br>
+        <button id="save-btn">Save</button> <button id="test">Test Function!</button>
+    </body>
+	<script src="editor.js"></script>
+
+  </html>
+

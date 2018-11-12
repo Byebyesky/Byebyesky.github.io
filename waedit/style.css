@@ -1,0 +1,66 @@
+html {
+    font-family: "Helevetica", sans-serif;    
+}
+
+p {
+    margin: 0;
+}
+  
+body {
+    color: white;
+    font-weight: 350;
+    max-width: 90vw;
+    margin: 5vh auto;
+    background-color: #333;
+}
+  
+*:focus {
+    outline: none;
+}
+
+.textpane {
+    min-height: 30px;
+    padding: 2px;
+    border: solid rgb(253, 251, 251) 1px;
+}
+
+.editor-pane {
+    background: rgb(32, 32, 32);
+    margin-top: 10px;
+    font-size: 24px;
+}
+  
+.keyword {
+      color: rgb(255, 169, 202);
+}
+
+.variable {
+      color: rgb(196, 216, 255);
+}
+
+.slider {
+    width: 25vw
+}
+
+#linenumber {
+    float:left;
+    width: auto;
+    overflow:hidden;
+    border-right: none;
+    color: rgb(145, 139, 139);
+}
+
+#editor {
+    display:inline-block;
+    width: 89%;
+    border-left: none;
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#slidervalue {
+    max-width: 5%;
+    text-align: center;
+    background-color: #333;
+}
