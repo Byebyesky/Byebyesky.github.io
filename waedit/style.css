@@ -52,7 +52,7 @@ body {
 
 #editor {
     display:inline-block;
-    width: 89%;
+    width: 100%;
     border-left: none;
     overflow-y: hidden;
     overflow-x: auto;
@@ -63,4 +63,9 @@ body {
     max-width: 5%;
     text-align: center;
     background-color: #333;
+}
+
+#container {
+    width: 100%;
+    display: flex;
 }
