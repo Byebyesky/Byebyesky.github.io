@@ -77,7 +77,7 @@ function setup() {
 
     editor.onkeydown = async function(e) {
         if(e.key == "Enter" ) { e.preventDefault(); document.execCommand("insertText", false, "\n"); await sleep(1); updateLines();}
-        else if(e.key == "Backspace" || e.key == "Delete") {  await sleep(1);  updateLines(); }
+        else if(e.key == "Backspace" || e.key == "Delete" || (e.keyCode == 90 && e.ctrlKey) || (e.keyCode == 89 && e.ctrlKey)) {  await sleep(1);  updateLines(); }
     }
     editor.onkeyup = function() {if(editor.innerHTML == "" || editor.innerHTML == "<br>") {editor.innerHTML = "<br>";}}
     editor.oncut = async function(e) { await sleep(1); updateLines(); }
